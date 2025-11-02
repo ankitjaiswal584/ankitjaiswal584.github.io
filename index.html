@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ankit Jaiswal | Development & Research Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="home">
+    <div class="container header-content">
+      <div class="avatar"></div>
+      <h1>Ankit Jaiswal</h1>
+      <p class="tagline">Graduate Student – Development Studies | AIIMS JRF</p>
+      <a href="Ankit_Tiss_CV.pdf" class="btn" download>Download CV</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p>I am a postgraduate in Development Studies with hands-on research experience at AIIMS Bhopal and MANIT Bhopal. My work focuses on development policy, livelihood studies, and impact evaluation. I am skilled in mixed-methods research, data analysis, and academic writing.</p>
+      </div>
+    </section>
+
+    <section id="education" class="section alt">
+      <div class="container">
+        <h2>Education</h2>
+        <ul class="edu-list">
+          <li><strong>MA – Development Studies</strong>, Tata Institute of Social Sciences (Ongoing)</li>
+          <li><strong>MA – Sociology</strong>, IGNOU (2022)</li>
+          <li><strong>B.Voc – Retail & Logistics</strong>, Banaras Hindu University (2019)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="card">
+          <h3>Mandla: Impact of PMAY-G on Tribal Livelihoods</h3>
+          <p>Analyzed housing policy impacts on tribal livelihoods using mixed methods — survey, interviews, and statistical analysis (SPSS).</p>
+        </div>
+        <div class="card">
+          <h3>UNICEF-Funded Community Health Project (AIIMS Bhopal)</h3>
+          <p>Evaluated maternal and child health services through quantitative and qualitative data collection and reporting.</p>
+        </div>
+        <div class="card">
+          <h3>ICSSR Project (MANIT Bhopal)</h3>
+          <p>Coordinated field research and data reporting, contributing to a study on rural infrastructure and development planning.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <span>SPSS</span>
+          <span>Stata</span>
+          <span>MySQL</span>
+          <span>Excel</span>
+          <span>Python (pandas)</span>
+          <span>Power BI</span>
+          <span>QGIS</span>
+          <span>NVivo / Taguette</span>
+          <span>KoboToolbox</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:your_email@example.com">your_email@example.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/your-linkedin" target="_blank">linkedin.com/in/your-linkedin</a></p>
+        <p>GitHub: <a href="https://github.com/your-github" target="_blank">github.com/your-github</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© Ankit Jaiswal — Development & Research Portfolio</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
