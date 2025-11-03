@@ -35,13 +35,13 @@ header {
   color: white;
 }
 
-.avatar img {
+.avatar {
   width: 120px;
   height: 120px;
+  margin: 0 auto 1rem;
   border-radius: 50%;
   border: 3px solid white;
-  object-fit: cover;
- }
+}
 
 h1 {
   font-family: 'Merriweather', serif;
