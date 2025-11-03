@@ -1,174 +1,149 @@
-/* ==========================
-   style.css — Ankit Jaiswal Portfolio
-   ========================== */
-
-:root {
-  --bg-color: #f5f2ea;
-  --primary-color: #556b2f;
-  --accent-color: #8f9779;
-  --text-color: #333;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ===============================
+   Global Styles
+   =============================== */
 body {
-  font-family: 'Inter', sans-serif;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #f8f9f7; /* soft olive tint */
+  color: #333;
   line-height: 1.6;
 }
 
-.container {
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
+/* ===============================
+   Header
+   =============================== */
 header {
   text-align: center;
-  padding: 4rem 1rem 2rem;
-  background-color: var(--accent-color);
-  color: white;
+  padding: 60px 20px 20px 20px;
+  background-color: #ffffff;
+  color: #333;
 }
 
-.avatar {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 1rem;
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #333;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #6b705c; /* olive accent */
+  margin-top: 10px;
+}
+
+/* ===============================
+   Section Formatting
+   =============================== */
+section {
+  max-width: 900px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover lift effect for sections */
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings inside sections */
+section h2 {
+  color: #6b705c; /* olive tone */
+  border-left: 4px solid #6b705c;
+  padding-left: 10px;
+}
+
+/* ===============================
+   Links
+   =============================== */
+a {
+  color: #6b705c;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+  color: #333;
+  transform: scale(1.02);
+}
+
+/* ===============================
+   Scroll to Top Button
+   =============================== */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  font-size: 24px;
+  background-color: #fff;
+  color: #6b705c;
+  border: 2px solid #6b705c;
   border-radius: 50%;
-  border: 3px solid white;
-  overflow: hidden;       /* ✅ keeps image inside circle */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 10px 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
-.avatar img {
-  width: 100%;            /* ✅ fits image inside container */
-  height: 100%;
-  object-fit: cover;      /* ✅ crops image without distortion */
-  border-radius: 50%;     /* keeps it round */
-}
-
-h1 {
-  font-family: 'Merriweather', serif;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.tagline {
-  font-weight: 400;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-.btn {
-  display: inline-block;
-  background-color: white;
-  color: var(--primary-color);
-  padding: 0.6rem 1.2rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #e5e3d7;
-}
-
-nav {
-  background-color: var(--primary-color);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 0.5rem 1rem;
-}
-
-nav a {
+#scrollTopBtn:hover {
+  background-color: #6b705c;
   color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
 }
 
-nav a:hover {
-  color: var(--accent-color);
+/* ===============================
+   Fade-in Animation
+   =============================== */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
 }
 
-.section {
-  padding: 4rem 1rem;
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.section.alt {
-  background-color: #f0ece2;
-}
-
-h2 {
-  text-align: center;
-  color: var(--primary-color);
-  font-family: 'Merriweather', serif;
-  margin-bottom: 1.5rem;
-}
-
-p, li {
-  font-size: 1rem;
-  margin-bottom: 0.8rem;
-}
-
-.card {
-  background-color: white;
-  border-left: 4px solid var(--primary-color);
-  padding: 1.2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  margin-bottom: 1.2rem;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 0.8rem;
-  text-align: center;
-}
-
-.skills-grid span {
-  background-color: white;
-  padding: 0.6rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-footer {
-  background-color: var(--primary-color);
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.6rem;
+/* ===============================
+   Responsive Design
+   =============================== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
   }
-  .tagline {
-    font-size: 1rem;
+
+  section {
+    margin: 40px 15px;
+    padding: 20px;
   }
-  nav ul {
-    flex-direction: column;
+
+  #scrollTopBtn {
+    bottom: 20px;
+    right: 20px;
   }
-  nav ul li {
-    margin: 0.3rem 0;
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  section h2 {
+    font-size: 1.2em;
   }
 }
