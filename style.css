@@ -66,17 +66,6 @@ h1 {
   margin-bottom: 1rem;
 }
 
-.btn {
-  display: inline-block;
-  background-color: white;
-  color: var(--primary-color);
-  padding: 0.6rem 1.2rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s;
-}
-
 .btn:hover {
   background-color: #e5e3d7;
 }
